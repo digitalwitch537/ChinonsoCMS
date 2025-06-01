@@ -13,8 +13,8 @@ media_folder: "public/uploads/images" # Location where files will be stored in t
 public_folder: "/uploads/images" # The src attribute for uploaded media will begin with this path
 
 # IMPORTANT: Update site_url and display_url with your actual live Netlify site URL once deployed.
-site_url: "https://your-site-name.netlify.app" # Example: Replace with your actual site URL
-display_url: "https://your-site-name.netlify.app" # Example: Replace with your actual site URL
+site_url: "https://chinonsoit.netlify.app" # Example: Replace with your actual site URL
+display_url: "https://chinonsoit.netlify.app" # Example: Replace with your actual site URL
 logo_url: "/site-logo-placeholder.svg" # Optional: Path to your logo, ensure this file exists in public/
 
 collections:
