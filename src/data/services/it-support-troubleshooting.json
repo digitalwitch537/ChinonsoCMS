@@ -1,0 +1,14 @@
+{
+  "id": "it-support-troubleshooting",
+  "slug": "it-support-troubleshooting",
+  "name": "IT Support & Troubleshooting",
+  "description": "Reliable support for all your IT issues, frm hardware to software.",
+  "price": "Starting at $75/hour",
+  "iconName": "Wrench",
+  "details": [
+    "Remote and on-site assistance",
+    "Hardware diagnostics and repair",
+    "Software installation and configuration",
+    "Virus and malware removal"
+  ]
+}

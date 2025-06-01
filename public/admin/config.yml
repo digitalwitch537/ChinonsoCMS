@@ -1,0 +1,96 @@
+
+backend:
+  name: git-gateway # For Netlify. For Vercel/GitHub, use 'github' and configure OAuth
+  # name: github
+  # repo: your-username/your-repo-name # Required for github backend. **UPDATE THIS IF USING GITHUB BACKEND**
+  branch: main # Or master, or your specific content branch
+
+# This line should be indented under backend:
+# It is important to set publish_mode to editorial_workflow if you are using a pre-production branch for previews
+publish_mode: editorial_workflow
+
+media_folder: "public/uploads/images" # Location where files will be stored in the repo
+public_folder: "/uploads/images" # The src attribute for uploaded media will begin with this path
+
+# IMPORTANT: Update site_url and display_url with your actual live Netlify site URL once deployed.
+site_url: "https://your-site-name.netlify.app" # Example: Replace with your actual site URL
+display_url: "https://your-site-name.netlify.app" # Example: Replace with your actual site URL
+logo_url: "/site-logo-placeholder.svg" # Optional: Path to your logo, ensure this file exists in public/
+
+collections:
+  - label: "Site Configuration"
+    name: "site_config"
+    files:
+      - label: "Homepage Content"
+        name: "homepage"
+        file: "src/data/siteConfig/homepage.json"
+        fields:
+          - { label: "Professional Photo URL", name: "professionalPhotoUrl", widget: "string", required: false, hint: "URL for professional photo. Leave blank if uploading." }
+          - { label: "Upload Professional Photo", name: "imageDataUri", widget: "image", required: false, media_library: { config: { multiple: false } }, hint: "Upload a photo. This will override the URL if both are provided." }
+          - { label: "Biography", name: "bio", widget: "markdown", required: true, hint: "Your professional biography for the homepage." }
+      - label: "Contact Information"
+        name: "contact_info"
+        file: "src/data/siteConfig/contactInfo.json"
+        fields:
+          - { label: "Email", name: "email", widget: "string", required: true }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "Address", name: "address", widget: "string", required: false }
+          - { label: "Business Hours", name: "businessHours", widget: "markdown", required: false }
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/data/blogPosts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename based on date and the 'slug' field below
+    identifier_field: "slug" # The 'slug' field is the primary identifier
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug (for URL and filename part)", name: "slug", widget: "string", required: true, hint: "URL-friendly version of the title (e.g., my-awesome-post). This is used in the filename." }
+      - { label: "Author", name: "author", widget: "string", required: true, default: "Sandra Chinonso" }
+      - { label: "Publication Date", name: "date", widget: "datetime", required: true, format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: true, hint: "Short summary for display on listings." }
+      - { label: "Content", name: "content", widget: "markdown", required: true, hint: "Main content of the blog post. Use Markdown for formatting." }
+      - { label: "Featured Image URL", name: "imageUrl", widget: "string", required: false, hint: "URL for the featured image. Leave blank if uploading." }
+      - { label: "Upload Featured Image", name: "imageDataUri", widget: "image", required: false, media_library: { config: { multiple: false } }, hint: "Upload a featured image. This will override the URL if both are provided." }
+      - { label: "Tags", name: "tags", widget: "list", required: false, field: { label: "Tag", name: "tag", widget: "string"} }
+      # The 'id' field for blog posts will be derived from the 'slug' field by data-service.ts based on filename.
+      # No need for a separate 'id' field in the CMS form itself if the slug serves this purpose.
+
+  - name: "services"
+    label: "Services"
+    folder: "src/data/services"
+    create: true
+    slug: "{{fields.slug}}" # Filename will be based on the 'slug' field below
+    identifier_field: "slug" # The 'slug' field is the primary identifier
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Service Name", name: "name", widget: "string", required: true }
+      - { label: "Slug (for URL and filename)", name: "slug", widget: "string", required: true, hint: "URL-friendly identifier, e.g., 'it-support'. This will be the filename." }
+      - { label: "ID (should match Slug)", name: "id", widget: "string", required: true, hint: "Make this identical to the Slug above. It's used by the application." }
+      - { label: "Description", name: "description", widget: "text", required: true }
+      - { label: "Price", name: "price", widget: "string", required: true, hint: "e.g., Starting at $X/hour or Custom Quote" }
+      - { label: "Icon Name (Lucide)", name: "iconName", widget: "string", required: false, hint: "e.g., Wrench, Briefcase. See lucide.dev/icons/" }
+      - { label: "Details / Key Features", name: "details", widget: "list", required: false, field: { label: "Detail", name: "detail", widget: "string"} }
+
+  - name: "projects"
+    label: "Portfolio Projects"
+    folder: "src/data/projects"
+    create: true
+    slug: "{{fields.slug}}" # Filename will be based on the 'slug' field below
+    identifier_field: "slug" # The 'slug' field is the primary identifier
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string", required: true }
+      - { label: "Slug (for URL and filename)", name: "slug", widget: "string", required: true, hint: "URL-friendly identifier, e.g., 'client-website-revamp'. This will be the filename." }
+      - { label: "ID (should match Slug)", name: "id", widget: "string", required: true, hint: "Make this identical to the Slug above. It's used by the application." }
+      - { label: "Description", name: "description", widget: "markdown", required: true }
+      - { label: "Image URL", name: "imageUrl", widget: "string", required: false, hint: "URL for the project image. Leave blank if uploading." }
+      - { label: "Upload Image", name: "imageDataUri", widget: "image", required: false, media_library: { config: { multiple: false } }, hint: "Upload a project image. Overrides URL." }
+      - { label: "Client Name", name: "client", widget: "string", required: false }
+      - { label: "Date Completed", name: "dateCompleted", widget: "datetime", required: false, format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+      - { label: "Technologies Used", name: "technologies", widget: "list", required: false, field: { label: "Technology", name: "technology", widget: "string"} }
+      - { label: "Live Project Link", name: "liveLink", widget: "string", required: false, hint: "URL to the live project, if any." }

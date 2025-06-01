@@ -1,0 +1,16 @@
+{
+  "id": "small-business-network-overhaul",
+  "slug": "small-business-network-overhaul",
+  "title": "Small Business Network Overhaul",
+  "description": "Designed and implemented a new, secure network infrastructure for a local accounting firm, improving speed and reliability.",
+  "imageUrl": "https://placehold.co/600x400.png",
+  "imageDataUri": "",
+  "client": "ABC Accountants",
+  "dateCompleted": "2024-03-20",
+  "technologies": [
+    "Ubiquiti UniFi",
+    "pfSense Firewall",
+    "Network Cabling"
+  ],
+  "liveLink": ""
+}

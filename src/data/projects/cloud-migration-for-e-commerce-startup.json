@@ -1,0 +1,17 @@
+{
+  "id": "cloud-migration-for-e-commerce-startup",
+  "slug": "cloud-migration-for-e-commerce-startup",
+  "title": "Cloud Migration for E-commerce Startup",
+  "description": "Successfully migrated an e-commerce platform from on-premise servers to AWS, enhancing scalability and reducing operational costs.",
+  "imageUrl": "https://placehold.co/600x400.png",
+  "imageDataUri": "",
+  "client": "ShopNow Online",
+  "dateCompleted": "2023-11-05",
+  "technologies": [
+    "AWS EC2",
+    "AWS RDS",
+    "S3",
+    "Data Migration"
+  ],
+  "liveLink": "#"
+}

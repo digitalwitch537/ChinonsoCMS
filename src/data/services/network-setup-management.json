@@ -1,0 +1,14 @@
+{
+  "id": "network-setup-management",
+  "slug": "network-setup-management",
+  "name": "Network Setup & Management",
+  "description": "Secure and efficient network solutions for home and small businesses.",
+  "price": "Custom Quote",
+  "iconName": "Briefcase",
+  "details": [
+    "Wired and wireless network design",
+    "Router and firewall configuration",
+    "Network security assessments",
+    "VPN setup for remote access"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "cloud-services-migration",
+  "slug": "cloud-services-migration",
+  "name": "Cloud Services & Migration",
+  "description": "Leverage the power of the cloud for scalability and flexibility.",
+  "price": "Custom Quote",
+  "iconName": "CloudCog",
+  "details": [
+    "Cloud strategy and consultation",
+    "Data migration to cloud platforms (AWS, Azure, Google Cloud)",
+    "Microsoft 365 / Google Workspace setup",
+    "Cloud backup solutions"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "custom-it-support-portal",
+  "slug": "custom-it-support-portal",
+  "title": "Custom IT Support Portal",
+  "description": "Developed a web-based portal for a client to manage IT support tickets and access a knowledge base.",
+  "imageUrl": "https://placehold.co/600x400.png",
+  "imageDataUri": "",
+  "client": "Tech Solutions Inc.",
+  "dateCompleted": "2023-07-15",
+  "technologies": [
+    "React",
+    "Node.js",
+    "MongoDB"
+  ],
+  "liveLink": ""
+}

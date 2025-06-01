@@ -1,0 +1,16 @@
+{
+  "id": "understanding-cloud-computing-basics",
+  "slug": "understanding-cloud-computing-basics",
+  "title": "Understanding Cloud Computing Basics",
+  "author": "Sandra Chinonso",
+  "date": "2024-07-15",
+  "excerpt": "A beginner-friendly guide to the fundamental concepts of cloud computing and its benefits.",
+  "content": "Cloud computing is revolutionizing how businesses and individuals store data and run applications. In this post, we explore the core ideas...\n\n- SaaS, PaaS, IaaS\n- Public, Private, Hybrid Clouds\n- Key benefits: Scalability, Cost-efficiency, Reliability",
+  "imageUrl": "https://placehold.co/600x400.png",
+  "imageDataUri": "",
+  "tags": [
+    "Cloud",
+    "Technology",
+    "Beginner"
+  ]
+}

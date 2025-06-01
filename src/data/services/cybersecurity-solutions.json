@@ -1,0 +1,14 @@
+{
+  "id": "cybersecurity-solutions",
+  "slug": "cybersecurity-solutions",
+  "name": "Cybersecurity Solutions",
+  "description": "Protect your digital assets with robust security measures.",
+  "price": "Starting at $100/hour",
+  "iconName": "ShieldCheck",
+  "details": [
+    "Security audits and vulnerability assessments",
+    "Endpoint protection and antivirus solutions",
+    "Data encryption and privacy compliance",
+    "Employee security awareness training"
+  ]
+}
