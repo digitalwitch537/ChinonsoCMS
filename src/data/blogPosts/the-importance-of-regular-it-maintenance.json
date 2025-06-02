@@ -1,16 +1,16 @@
 {
-  "id": "the-importance-of-regular-it-maintenance",
-  "slug": "the-importance-of-regular-it-maintenance",
-  "title": "The Importance of Regular IT Maintenance",
-  "author": "Sandra Chinonso",
-  "date": "2024-05-10",
   "excerpt": "Why proactive IT maintenance is crucial for preventing downtime and ensuring optimal performance.",
-  "content": "Many overlook regular IT maintenance until a problem arises. Discover why a proactive approach can save you time and money in the long run...",
+  "imageDataUri": "/uploads/images/ypat-2025-batch-2.jpg",
+  "author": "Sandra Chinonso",
+  "slug": "the-importance-of-regular-it-maintenance",
+  "date": "2024-05-10",
   "imageUrl": "https://placehold.co/600x400.png",
-  "imageDataUri": "",
+  "title": "The Importance of Regular IT Maintenance",
   "tags": [
     "IT Support",
     "Maintenance",
     "Productivity"
-  ]
+  ],
+  "content": "Many overlook regular IT maintenance until a problem arises. Discover why a proactive approach can save you time and money in the long run...",
+  "id": "the-importance-of-regular-it-maintenance"
 }
