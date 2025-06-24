@@ -36,7 +36,7 @@ export async function HeroSection() {
   const imageSrc = homepageData.imageDataUri || homepageData.professionalPhotoUrl;
 
   return (
-    <section className="glass-card">
+    <section className="bg-gradient-to-br from-background to-secondary/30 pt-10 pb-20 md:pt-14 md:pb-28 lg:pt-16 lg:pb-32">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-start gap-y-12 gap-x-8 lg:grid-cols-2 lg:items-start">
           <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
