@@ -188,21 +188,4 @@ body {
     @apply text-foreground;
 }
 
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.13);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.9px);
-  -webkit-backdrop-filter: blur(6.9px);
-  border: 1px solid rgba(255, 255, 255, 1);
-  /* Add padding to ensure content isn't flush against the edges */
-  padding: 1.5rem; /* 24px, adjust as needed */
-}
-
-/* Consider dark mode adjustments if the site has a dark theme */
-/* This is a basic example, might need refinement based on actual dark theme variables */
-.dark .glass-card {
-  background: rgba(0, 0, 0, 0.13); /* Darker background for dark mode */
-  border: 1px solid rgba(0, 0, 0, 1); /* Darker border for dark mode */
-}
+    
