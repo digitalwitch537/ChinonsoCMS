@@ -25,6 +25,12 @@ export default function RootLayout({
       </head>
       {/* Applied suppressHydrationWarning directly to body as well if needed, but primarily for html tag */}
       <body className="font-body antialiased min-h-screen flex flex-col" suppressHydrationWarning={true}>
+        <div className="orb orb-1"></div>
+        <div className="orb orb-2"></div>
+        <div className="orb orb-3"></div>
+        <div className="orb orb-4"></div>
+        <div className="orb orb-5"></div>
+        <div className="orb orb-6"></div>
         {children}
         <Toaster />
       </body>

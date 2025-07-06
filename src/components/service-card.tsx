@@ -15,7 +15,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
   const serviceSlug = service.slug || service.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
 
   return (
-    <Card className="flex flex-col h-full transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <Card className="glass-card flex flex-col h-full transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <CardHeader>
         <div className="flex items-center gap-4 mb-2">
           {IconComponent && <IconComponent className="h-10 w-10 text-accent" />}

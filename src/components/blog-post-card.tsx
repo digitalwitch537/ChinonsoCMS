@@ -22,7 +22,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
   const readingTime = getReadingTimeShort(post.content);
 
   return (
-    <Card className="flex flex-col h-full overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-border/70 hover:border-accent/50">
+    <Card className="glass-card flex flex-col h-full overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-border/70 hover:border-accent/50">
       {imageSrc && (
         <div className="relative h-52 w-full overflow-hidden">
           <Image

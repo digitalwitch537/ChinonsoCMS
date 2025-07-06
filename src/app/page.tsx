@@ -1,4 +1,5 @@
 
+
 import Layout from '@/components/layout';
 import { HeroSection } from '@/components/hero-section';
 import { PageContainer } from '@/components/page-container';
@@ -32,7 +33,7 @@ export default async function HomePage() {
 
       <PageContainer className="py-12 md:py-16 lg:py-20 space-y-16 md:space-y-24">
         
-        <section id="services">
+        <section id="services" className="glass-card p-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Our Core IT Services</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -57,7 +58,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="blog" className="py-16 md:py-20 bg-card rounded-xl shadow-lg border border-border/50">
+        <section id="blog" className="glass-card p-8">
            <div className="px-6 lg:px-8">
             <div className="text-center mb-12 md:mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline text-card-foreground">Latest Tech Insights</h2>
@@ -84,7 +85,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="portfolio">
+        <section id="portfolio" className="glass-card p-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Showcasing Our Work</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -109,7 +110,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="cta" className="py-16 md:py-20 text-center bg-gradient-to-r from-accent/80 to-accent rounded-xl shadow-xl">
+        <section id="cta" className="glass-card p-8 text-center">
           <div className="px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-accent-foreground">Ready to Elevate Your IT Infrastructure?</h2>
             <p className="mt-4 text-lg text-accent-foreground/90 max-w-2xl mx-auto">
@@ -128,3 +129,4 @@ export default async function HomePage() {
     </Layout>
   );
 }
+

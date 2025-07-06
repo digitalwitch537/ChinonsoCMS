@@ -16,7 +16,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const imageSrc = project.imageDataUri || project.imageUrl;
 
   return (
-    <Card className="flex flex-col h-full overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <Card className="glass-card flex flex-col h-full overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       {imageSrc ? (
         <div className="relative h-56 w-full">
           <Image
