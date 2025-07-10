@@ -1,5 +1,4 @@
 
-
 import Layout from '@/components/layout';
 import { HeroSection } from '@/components/hero-section';
 import { PageContainer } from '@/components/page-container';
@@ -14,8 +13,8 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 
 async function getHomepageFeaturedData() {
   const services = await getAllCollectionItems<Service>("services");
-  const blogPosts = await getAllCollectionItems<BlogPost>("blogPosts"); // Already sorted by date in service
-  const projects = await getAllCollectionItems<Project>("projects"); // Already sorted by date in service
+  const blogPosts = await getAllCollectionItems<BlogPost>("blogPosts");
+  const projects = await getAllCollectionItems<Project>("projects");
 
   return {
     featuredServices: services.slice(0, 3),
@@ -33,7 +32,7 @@ export default async function HomePage() {
 
       <PageContainer className="py-12 md:py-16 lg:py-20 space-y-16 md:space-y-24">
         
-        <section id="services" className="glass-card p-8">
+        <section id="services" className="glass-card p-8 md:p-12">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Our Core IT Services</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -50,7 +49,7 @@ export default async function HomePage() {
             </div>
           )}
           <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 hover:text-accent shadow-sm hover:shadow-md transition-all">
+            <Button asChild size="lg" variant="outline">
               <Link href="/services">
                 Discover All Services <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -58,10 +57,10 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="blog" className="glass-card p-8">
+        <section id="blog" className="glass-card p-8 md:p-12">
            <div className="px-6 lg:px-8">
             <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline text-card-foreground">Latest Tech Insights</h2>
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">Latest Tech Insights</h2>
                 <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
                 Stay informed with our expert analysis, tutorials, and news from the IT world.
                 </p>
@@ -76,7 +75,7 @@ export default async function HomePage() {
             </div>
             )}
             <div className="text-center mt-12">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-all">
+              <Button asChild size="lg" variant="secondary" className="text-secondary-foreground">
                 <Link href="/blog">
                   Explore Our Blog <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -85,7 +84,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="portfolio" className="glass-card p-8">
+        <section id="portfolio" className="glass-card p-8 md:p-12">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Showcasing Our Work</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -102,7 +101,7 @@ export default async function HomePage() {
           </div>
           )}
           <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 hover:text-accent shadow-sm hover:shadow-md transition-all">
+            <Button asChild size="lg" variant="outline">
               <Link href="/portfolio">
                 View Full Portfolio <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -110,14 +109,14 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="cta" className="glass-card p-8 text-center">
+        <section id="cta" className="glass-card text-center p-8 md:p-12 bg-secondary/20 border-secondary">
           <div className="px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline text-accent-foreground">Ready to Elevate Your IT Infrastructure?</h2>
-            <p className="mt-4 text-lg text-accent-foreground/90 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline text-secondary-foreground">Ready to Elevate Your IT Infrastructure?</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               Let's discuss how ChinonsoIT can architect robust, scalable, and secure technology solutions to drive your business forward.
             </p>
             <div className="mt-10">
-              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 shadow-lg transform transition-transform hover:scale-105">
+              <Button asChild size="lg" variant="secondary" className="text-secondary-foreground">
                 <Link href="/contact">
                   Schedule Your Free Consultation <CheckCircle className="ml-2 h-5 w-5" />
                 </Link>
@@ -129,4 +128,3 @@ export default async function HomePage() {
     </Layout>
   );
 }
-

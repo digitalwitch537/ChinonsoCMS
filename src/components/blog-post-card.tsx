@@ -22,9 +22,9 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
   const readingTime = getReadingTimeShort(post.content);
 
   return (
-    <Card className="glass-card flex flex-col h-full overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-border/70 hover:border-accent/50">
+    <Card className="glass-card flex flex-col h-full overflow-hidden group">
       {imageSrc && (
-        <div className="relative h-52 w-full overflow-hidden">
+        <div className="relative h-52 w-full overflow-hidden rounded-t-lg">
           <Image
             src={imageSrc}
             alt={post.title}
@@ -38,12 +38,12 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
       <CardHeader className="pb-3">
         {post.tags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-2">
-            {post.tags.slice(0, 2).map((tag) => ( // Show max 2 tags
-              <Badge key={tag} variant="secondary" className="text-xs">{tag}</Badge>
+            {post.tags.slice(0, 2).map((tag) => (
+              <Badge key={tag} variant="secondary" className="text-secondary-foreground text-xs">{tag}</Badge>
             ))}
           </div>
         )}
-        <CardTitle className="text-xl font-headline group-hover:text-accent transition-colors">
+        <CardTitle className="text-xl font-headline text-foreground transition-colors group-hover:text-primary">
           <Link href={`/blog/${post.slug}`}>{post.title}</Link>
         </CardTitle>
         <div className="flex flex-wrap space-x-4 text-xs text-muted-foreground mt-1">
@@ -56,7 +56,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
         <CardDescription className="line-clamp-3">{post.excerpt}</CardDescription>
       </CardContent>
       <CardFooter>
-        <Button variant="link" asChild className="text-accent hover:text-accent/90 p-0 font-medium group-hover:underline">
+        <Button variant="link" asChild className="text-primary hover:text-primary/80 p-0 font-medium group-hover:underline">
           <Link href={`/blog/${post.slug}`}>
             Read Article <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
@@ -65,5 +65,3 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
     </Card>
   );
 }
-
-    

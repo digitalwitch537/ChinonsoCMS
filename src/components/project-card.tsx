@@ -16,24 +16,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const imageSrc = project.imageDataUri || project.imageUrl;
 
   return (
-    <Card className="glass-card flex flex-col h-full overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <Card className="glass-card flex flex-col h-full overflow-hidden group">
       {imageSrc ? (
-        <div className="relative h-56 w-full">
+        <div className="relative h-56 w-full overflow-hidden rounded-t-lg">
           <Image
             src={imageSrc}
             alt={project.title}
             layout="fill"
             objectFit="cover"
             data-ai-hint="tech project"
+            className="transform transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       ) : (
-         <div className="relative h-56 w-full bg-muted flex items-center justify-center">
-            <Tags className="h-16 w-16 text-muted-foreground/50" /> {/* Placeholder Icon */}
+         <div className="relative h-56 w-full bg-muted/30 flex items-center justify-center rounded-t-lg">
+            <Tags className="h-16 w-16 text-muted-foreground/50" />
         </div>
       )}
       <CardHeader>
-        <CardTitle className="text-xl font-headline">{project.title}</CardTitle>
+        <CardTitle className="text-xl font-headline text-foreground">{project.title}</CardTitle>
         {project.client && <p className="text-sm text-muted-foreground">Client: {project.client}</p>}
       </CardHeader>
       <CardContent className="flex-grow">
@@ -45,7 +46,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </h4>
             <div className="flex flex-wrap gap-1">
               {project.technologies.map((tech) => (
-                <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
+                <Badge key={tech} variant="secondary" className="text-secondary-foreground text-xs">{tech}</Badge>
               ))}
             </div>
           </div>
@@ -63,4 +64,3 @@ export function ProjectCard({ project }: ProjectCardProps) {
     </Card>
   );
 }
-
